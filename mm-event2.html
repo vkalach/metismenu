@@ -1,6 +1,99 @@
----
-title: events 2
----
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>metisMenu - events 2</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css" />
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-1669764-16', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/metismenu"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.4.1/packaged/jquery.noty.packaged.min.js"></script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">metisMenu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="Examples" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Examples
+              </a>
+              <div class="dropdown-menu" aria-labelledby="Examples">
+                <a class="dropdown-item" href="mm-vertical.html">Vertical Menu</a>
+                <a class="dropdown-item" href="mm-horizontal.html">Horizontal Menu</a>
+                <a class="dropdown-item" href="mm-folder.html">Folder View</a>
+                <a class="dropdown-item" href="mm-vertical-hover.html">Hover Option For Desktop</a>
+                <a class="dropdown-item" href="mm-zurb.html">Foundation | Zurb</a>
+                <a class="dropdown-item" href="mm-animate.html">Animate</a>
+                <a class="dropdown-item" href="mm-event.html">Event</a>
+                <a class="dropdown-item" href="mm-event2.html">Event 2</a>
+                <a class="dropdown-item" href="mm-dispose.html">Stop & Start metisMenu</a>
+                <a class="dropdown-item" href="mm-ajax.html">Ajax</a>
+                <a class="dropdown-item" href="mm-faq.html">FAQ</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="Templates" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Templates
+              </a>
+              <div class="dropdown-menu" aria-labelledby="Templates">
+                <a class="dropdown-item" href="http://chl.onokumus.com" target="_blank">Chaldene Admin</a>
+                <a class="dropdown-item" href="http://elk.onokumus.com" target="_blank">Elektron Admin</a>
+                <a class="dropdown-item" href="http://onokumus.github.io/twbuttons/" target="_blank">twbuttons</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://onokumus.com" target="_blank">onokumus</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
 <link href="css/mm-vertical.css" rel="stylesheet" type="text/css"/>
 <div class="container">
   <div class="row">
@@ -216,24 +309,21 @@ title: events 2
           </span>
         </div>
         <div class="panel-body">
-{{#markdown}}
-  ```html
-  <script>
-    $(function() {
-      var navbarHeight = $('.navbar').height();
-      $('#menu')
-        .metisMenu()
-        .on('shown.metisMenu', function(event) {
-          $('body,html').animate({
-            scrollTop: $(event.target).parent('li').position().top - navbarHeight
-          }, 600);
-        });
-    });
-  </script>
-  ```
-{{/markdown}}
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  $(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> navbarHeight = $(<span class="hljs-string">'.navbar'</span>).height();
+    $(<span class="hljs-string">'#menu'</span>)
+      .metisMenu()
+      .on(<span class="hljs-string">'shown.metisMenu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+        $(<span class="hljs-string">'body,html'</span>).animate({
+          <span class="hljs-attr">scrollTop</span>: $(event.target).parent(<span class="hljs-string">'li'</span>).position().top - navbarHeight
+        }, <span class="hljs-number">600</span>);
+      });
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
 
-          
+
           <p>
             ...
           </p>
@@ -532,3 +622,20 @@ title: events 2
       });
   });
 </script>
+
+
+
+
+  <hr>
+  <div class="container">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- responsive reklam -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5671633872085649" data-ad-slot="6251877391" data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  </body>
+
+</html>

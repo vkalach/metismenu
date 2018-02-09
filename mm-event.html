@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>metisMenu - events</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="metisMenu.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css" />
     <link rel="stylesheet" href="css/demo.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.8.3/themes/prism.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css" />
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -31,16 +31,16 @@
         a.src = g;
         m.parentNode.insertBefore(a, m)
       })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    
+
       ga('create', 'UA-1669764-16', 'auto');
       ga('send', 'pageview');
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="metisMenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/metismenu"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.8.3/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -49,59 +49,49 @@
 
   <body>
 
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">metisMenu</a>
-        </div>
+        <a class="navbar-brand" href="index.html">metisMenu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Examples <span class="caret"></span>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="Examples" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Examples
               </a>
-              <ul class="dropdown-menu">
-                <li><a href="mm-vertical.html">Vertical Menu</a></li>
-                <li><a href="mm-horizontal.html">Horizontal Menu</a></li>
-                <li><a href="mm-folder.html">Folder View</a></li>
-                <li><a href="mm-vertical-hover.html">Hover Option For Desktop</a></li>
-                <li><a href="mm-zurb.html">Foundation | Zurb</a></li>
-                <li><a href="mm-animate.html">Animate</a></li>
-                <li><a href="mm-event.html">Event</a></li>
-                <li><a href="mm-event2.html">Event 2</a></li>
-                <li><a href="mm-dispose.html">Stop & Start metisMenu</a></li>
-                <li><a href="mm-ajax.html">Ajax</a></li>
-                <li><a href="mm-faq.html">FAQ</a></li>
-              </ul>
+              <div class="dropdown-menu" aria-labelledby="Examples">
+                <a class="dropdown-item" href="mm-vertical.html">Vertical Menu</a>
+                <a class="dropdown-item" href="mm-horizontal.html">Horizontal Menu</a>
+                <a class="dropdown-item" href="mm-folder.html">Folder View</a>
+                <a class="dropdown-item" href="mm-vertical-hover.html">Hover Option For Desktop</a>
+                <a class="dropdown-item" href="mm-zurb.html">Foundation | Zurb</a>
+                <a class="dropdown-item" href="mm-animate.html">Animate</a>
+                <a class="dropdown-item" href="mm-event.html">Event</a>
+                <a class="dropdown-item" href="mm-event2.html">Event 2</a>
+                <a class="dropdown-item" href="mm-dispose.html">Stop & Start metisMenu</a>
+                <a class="dropdown-item" href="mm-ajax.html">Ajax</a>
+                <a class="dropdown-item" href="mm-faq.html">FAQ</a>
+              </div>
             </li>
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Admin Templates <span class="caret"></span>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="Templates" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Templates
               </a>
-              <ul class="dropdown-menu">
-                <li><a href="http://chl.onokumus.com" target="_blank">Chaldene Admin</a></li>
-                <li><a href="http://elk.onokumus.com" target="_blank">Elektron Admin</a></li>
-                <li><a href="http://onokumus.github.io/twbuttons/" target="_blank">twbuttons</a></li>
-              </ul>
+              <div class="dropdown-menu" aria-labelledby="Templates">
+                <a class="dropdown-item" href="http://chl.onokumus.com" target="_blank">Chaldene Admin</a>
+                <a class="dropdown-item" href="http://elk.onokumus.com" target="_blank">Elektron Admin</a>
+                <a class="dropdown-item" href="http://onokumus.github.io/twbuttons/" target="_blank">twbuttons</a>
+              </div>
             </li>
-
-            <li><a href="http://onokumus.com" target="_blank">onokumus</a></li>
-
+            <li class="nav-item">
+              <a class="nav-link" href="http://onokumus.com" target="_blank">onokumus</a>
+            </li>
           </ul>
         </div>
-        <!-- /.navbar-collapse -->
       </div>
-      <!-- /.container-fluid -->
     </nav>
 
 <link href="css/mm-vertical.css" rel="stylesheet" type="text/css"/>
