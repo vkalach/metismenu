@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>metisMenu - events</title>
+  <title>metisMenu - {{title}}</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
@@ -16,7 +16,9 @@
 
   <link rel="stylesheet" href="assets/css/app.css">
 
-  <link rel="stylesheet" href="assets/css/mm-vertical.css">
+{{#if css}}
+  <link rel="stylesheet" href="assets/css/{{css}}.css">
+{{/if}}
   <script>
     (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
@@ -87,129 +89,7 @@
 
   <main role="main">
     <div class="container pt-5">
-        <div class="row">
-    <div class="col-md-3">
-      <nav class="sidebar-nav">
-        <ul class="metismenu" id="menu">
-          <li>
-            <a class="has-arrow" href="#">
-              <span class="fa fa-fw fa-github fa-lg"></span>
-              metisMenu
-            </a>
-            <ul aria-expanded="true">
-              <li>
-                <a href="https://github.com/onokumus/metisMenu">
-                  <span class="fa fa-fw fa-code-fork"></span> Fork
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/onokumus/metisMenu">
-                  <span class="fa fa-fw fa-star"></span> Star
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/onokumus/metisMenu/issues">
-                  <span class="fa fa-fw fa-exclamation-triangle"></span> Issues
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="has-arrow" href="#" aria-expanded="false">Menu 0</a>
-            <ul aria-expanded="false">
-              <li><a href="#">item 0.1</a></li>
-              <li><a href="#">item 0.2</a></li>
-              <li><a href="http://onokumus.com">onokumus</a></li>
-              <li><a href="#">item 0.4</a></li>
-            </ul>
-          </li>
-          <li id="removable">
-            <a class="has-arrow" href="#" aria-expanded="false">Menu 1</a>
-            <ul aria-expanded="false">
-              <li><a href="#">item 1.1</a></li>
-              <li><a href="#">item 1.2</a></li>
-              <li>
-                <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
-                <ul aria-expanded="false">
-                  <li><a href="#">item 1.3.1</a></li>
-                  <li><a href="#">item 1.3.2</a></li>
-                  <li><a href="#">item 1.3.3</a></li>
-                  <li><a href="#">item 1.3.4</a></li>
-                </ul>
-              </li>
-              <li><a href="#">item 1.4</a></li>
-              <li>
-                <a class="has-arrow" href="#" aria-expanded="false">Menu 1.5</a>
-                <ul aria-expanded="false">
-                  <li><a href="#">item 1.5.1</a></li>
-                  <li><a href="#">item 1.5.2</a></li>
-                  <li><a href="#">item 1.5.3</a></li>
-                  <li><a href="#">item 1.5.4</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="has-arrow" href="#" aria-expanded="false">Menu 2</a>
-            <ul aria-expanded="false">
-              <li><a href="#">item 2.1</a></li>
-              <li><a href="#">item 2.2</a></li>
-              <li><a href="#">item 2.3</a></li>
-              <li><a href="#">item 2.4</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="col-md-9">
-      <h3>Events
-            <small>thanks <a href="https://github.com/needim/">needim</a>
-              <a href="https://github.com/needim/noty/" target="_blank">noty</a>
-            </small>
-          </h3>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          Code
-          <span class="pull-right">
-                <span class="fa fa-code"></span>
-          </span>
-        </div>
-        <div class="panel-body">
-          <pre><code class="language-javascript">
-$(function() {
-
-  $('#menu').metisMenu()
-  .on('show.metisMenu', function(event) {
-
-      // do something…
-
-  }).on('shown.metisMenu', function(event) {
-
-    // do something…
-
-  }).on('hide.metisMenu', function(event) {
-
-    // do something…
-
-  }).on('hidden.metisMenu', function(event) {
-
-    // do something…
-
-  });
-});
-              </code></pre>
-
-
-<p>
-  <a class="btn btn-info btn-lg" href="assets/css/mm-vertical.css" target="_top">Download CSS File</a>
-  <a class="btn btn-secondary btn-lg" href="assets/js/mm-event.js" target="_top">Download JS File</a>
-
-</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
+      {% body %}
     </div>
 
   </main>
@@ -232,7 +112,9 @@ $(function() {
   <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/noty/lib/noty.min.js"></script>
 
-    <script src="assets/js/mm-event.js" charset="utf-8"></script>
+  {{#if js}}
+    <script src="assets/js/{{js}}.js" charset="utf-8"></script>
+  {{/if}}
 
 </body>
 

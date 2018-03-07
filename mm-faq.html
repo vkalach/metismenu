@@ -1,86 +1,76 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>metisMenu - FAQ</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>metisMenu - FAQ</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty/lib/noty.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty/lib/themes/relax.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css" />
-    <link rel="stylesheet" href="css/demo.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css" />
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <link rel="stylesheet" href="assets/css/app.css">
 
-    <script>
-      (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  <link rel="stylesheet" href="assets/css/mm-faq.css">
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-1669764-16', 'auto');
-      ga('send', 'pageview');
-    </script>
+    ga('create', 'UA-1669764-16', 'auto');
+    ga('send', 'pageview');
+  </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/metismenu"></script>
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
 
-    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+<body>
 
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.4.1/packaged/jquery.noty.packaged.min.js"></script>
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">metisMenu</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <header>
+    <div class="navbar navbar-expand-md navbar-dark bg-dark box-shadow">
+      <div class="container d-flex justify-content-between">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <strong>metisMenu</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav ml-auto">
+
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="Examples" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Examples
-              </a>
-              <div class="dropdown-menu" aria-labelledby="Examples">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Examples</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
                 <a class="dropdown-item" href="mm-vertical.html">Vertical Menu</a>
                 <a class="dropdown-item" href="mm-horizontal.html">Horizontal Menu</a>
                 <a class="dropdown-item" href="mm-folder.html">Folder View</a>
                 <a class="dropdown-item" href="mm-vertical-hover.html">Hover Option For Desktop</a>
-                <a class="dropdown-item" href="mm-zurb.html">Foundation | Zurb</a>
                 <a class="dropdown-item" href="mm-animate.html">Animate</a>
                 <a class="dropdown-item" href="mm-event.html">Event</a>
                 <a class="dropdown-item" href="mm-event2.html">Event 2</a>
-                <a class="dropdown-item" href="mm-dispose.html">Stop & Start metisMenu</a>
+                <a class="dropdown-item" href="mm-dispose.html">Stop &amp; Start metisMenu</a>
                 <a class="dropdown-item" href="mm-ajax.html">Ajax</a>
                 <a class="dropdown-item" href="mm-faq.html">FAQ</a>
               </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="Templates" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Templates
-              </a>
-              <div class="dropdown-menu" aria-labelledby="Templates">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown02">
                 <a class="dropdown-item" href="http://chl.onokumus.com" target="_blank">Chaldene Admin</a>
                 <a class="dropdown-item" href="http://elk.onokumus.com" target="_blank">Elektron Admin</a>
                 <a class="dropdown-item" href="http://onokumus.github.io/twbuttons/" target="_blank">twbuttons</a>
@@ -92,15 +82,20 @@
           </ul>
         </div>
       </div>
-    </nav>
-<link rel="stylesheet" href="css/mm-faq.css">
-<div class="container">
+    </div>
+  </header>
 
-  <div class="panel panel-default">
+  <main role="main">
+    <div class="container pt-5">
+        <div class="panel panel-default">
     <div class="panel-heading">
       <h2 class="panel-title">FAQ <small>metisMenu version 2.7.x</small></h2>
     </div>
     <div class="panel-body">
+      <p>
+        <a class="btn btn-info btn-lg" href="assets/css/mm-faq.css" target="_top">Download CSS File</a>
+        <a class="btn btn-secondary btn-lg" href="assets/js/mm-faq.js" target="_top">Download JS File</a>
+      </p>
       <div class="metismenu faq-menu">
 
         <div class="faq-item">
@@ -141,39 +136,30 @@
     </div>
   </div>
 
-  <div class="card text-center">
-  <div class="card-body">
-    <a href="css/mm-faq.css" class="btn btn-primary">Download CSS File</a>
-  </div>
-</div>
+    </div>
+
+  </main>
+
+  <footer class="text-muted">
+    <div class="container">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- responsive reklam -->
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5671633872085649" data-ad-slot="6251877391" data-ad-format="auto"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </footer>
 
 
-<script>
-  $(function() {
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/noty/lib/noty.min.js"></script>
 
-    $('.faq-menu').metisMenu({
-      toggle: false,
-      triggerElement: '.faq-link',
-      parentTrigger: '.faq-item',
-      subMenu: '.faq-answer'
-    });
+    <script src="assets/js/mm-faq.js" charset="utf-8"></script>
 
-  });
-</script>
-
-
-
-
-  <hr>
-  <div class="container">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- responsive reklam -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5671633872085649" data-ad-slot="6251877391" data-ad-format="auto"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-
-  </body>
+</body>
 
 </html>
