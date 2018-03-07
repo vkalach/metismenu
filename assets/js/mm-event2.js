@@ -3,6 +3,8 @@ $(function() {
   $('#menu')
     .metisMenu()
     .on('shown.metisMenu', function(event) {
-      $('body,html').scrollTop( $(event.target).parent('li').position().top - navbarHeight );
+      $('body,html').animate({
+        scrollTop: $(event.target).parent('li').position().top - navbarHeight
+      }, 600);
     });
 });
