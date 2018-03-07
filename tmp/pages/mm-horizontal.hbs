@@ -1,0 +1,20 @@
+---
+title: horizontal menu
+css: mm-horizontal
+js: mm-horizontal
+---
+  <header>
+    <h3>Clickable & Responsive <small>default</small></h3>
+    <nav class="topbar-nav">
+      {{> menu id="1"}}
+    </nav>
+    <h3>Hoverable for Desktop & Responsive</h3>
+    <nav class="topbar-nav is-hoverable">
+      {{> menu id="2"}}
+    </nav>
+  </header>
+  <p>
+    <br>
+    {{> downCss}}
+    {{> downJs}}
+  </p>

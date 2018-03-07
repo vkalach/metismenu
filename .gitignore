@@ -54,6 +54,6 @@ templates/partials/ga.hbs
 
 # General folders and files to ignore
 _gh_pages
-tmp
+#tmp
 temp
 TODO.md
