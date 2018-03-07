@@ -306,7 +306,9 @@ $(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span c
   $(<span class="hljs-string">'#menu'</span>)
     .metisMenu()
     .on(<span class="hljs-string">'shown.metisMenu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
-      $(<span class="hljs-string">'body,html'</span>).scrollTop( $(event.target).parent(<span class="hljs-string">'li'</span>).position().top - navbarHeight );
+      $(<span class="hljs-string">'body,html'</span>).animate({
+        <span class="hljs-attr">scrollTop</span>: $(event.target).parent(<span class="hljs-string">'li'</span>).position().top - navbarHeight
+      }, <span class="hljs-number">600</span>);
     });
 });
 
