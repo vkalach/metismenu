@@ -11,14 +11,14 @@ $(function() {
         $('#menu').metisMenu('dispose');
         $("#menu").append(result);
 
-        noty({
+        new Noty({
             text: 'ajax menu appended to menu',
             layout: 'topRight',
             type: 'success',
-            theme: 'metroui',
+            theme: 'relax',
             progressBar: true,
             timeout: 2000
-        });
+        }).show();
 
         $('#menu').metisMenu();
         $this.attr('disabled', 'disabled');
