@@ -11,7 +11,7 @@ app.task('init', function(cb) {
     app.data('github', app.options.github);
     app.helper('markdown', markdown);
     app.data('pkg', pkg);
-    app.layouts(path.join(__dirname, './templates/layouts/*.hbs'));
+    app.layouts(path.join(__dirname, './templates/lay/*.hbs'));
     app.partials(path.join(__dirname, './templates/partials/**/*.hbs'));
     app.pages(path.join(__dirname, './templates/pages/*.hbs'));
     app.option('layout', 'default');
