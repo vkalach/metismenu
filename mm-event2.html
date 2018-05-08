@@ -300,19 +300,18 @@
           </span>
         </div>
         <div class="panel-body">
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">var</span> navbarHeight = $(<span class="hljs-string">'.navbar'</span>).height();
-  $(<span class="hljs-string">'#menu'</span>)
+<pre><code class="language-html">&lt;script>
+$(function() {
+  $('#menu')
     .metisMenu()
-    .on(<span class="hljs-string">'shown.metisMenu'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
-      $(<span class="hljs-string">'body,html'</span>).animate({
-        <span class="hljs-attr">scrollTop</span>: $(event.target).parent(<span class="hljs-string">'li'</span>).position().top - navbarHeight
-      }, <span class="hljs-number">600</span>);
+    .on('shown.metisMenu', function(event) {
+      $('body,html').animate({
+        scrollTop: $(event.target).parent('li').offset().top
+      }, 600);
     });
 });
 
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+&lt;/script>
 </code></pre>
 
 <p>
