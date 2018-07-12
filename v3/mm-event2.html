@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-alpha.1/dist/metisMenu.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-beta.0/dist/metisMenu.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty/lib/noty.css">
@@ -291,7 +291,7 @@
       </nav>
     </div>
     <div class="col-md-9">
-      <h3>Events</h3>
+      <h3>Events <small>Thanks <a href="http://callmecavs.com/jump.js/" target="_blank">jump.js</a></small></h3>
       <div class="panel panel-default">
         <div class="panel-heading">
           Code
@@ -301,14 +301,11 @@
         </div>
         <div class="panel-body">
 <pre><code class="language-html">&lt;script>
-$(function() {
-  $('#menu')
-    .metisMenu()
-    .on('shown.metisMenu', function(event) {
-      $('body,html').animate({
-        scrollTop: $(event.target).parent('li').offset().top
-      }, 600);
-    });
+document.addEventListener("DOMContentLoaded", function(event) {
+  new MetisMenu('#menu')
+  .on('shown.metisMenu', function(event) {
+    Jump("#menu")
+  });
 });
 
 &lt;/script>
@@ -624,7 +621,7 @@ $(function() {
 
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-alpha.1/dist/metisMenu.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-beta.0/dist/metisMenu.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/noty/lib/noty.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jump.js@1.0.2/dist/jump.min.js"></script>

@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-alpha.1/dist/metisMenu.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-beta.0/dist/metisMenu.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty/lib/noty.css">
@@ -174,13 +174,9 @@
            </span>
          </div>
          <div class="panel-body">
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  $(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-
-      $(<span class="hljs-string">'#menu1'</span>).metisMenu();
-
-  });
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<pre><code class="language-javascript">document.addEventListener("DOMContentLoaded", function(event) {
+  new MetisMenu('#menu1');
+});
 </code></pre>
           <p>
             <a class="btn btn-info btn-lg" href="assets/css/mm-vertical.css" target="_top">Download CSS File</a>
@@ -279,13 +275,11 @@
               </span>
             </div>
             <div class="panel-body">
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  $(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-
-      $(<span class="hljs-string">'#menu2'</span>).metisMenu({ <span class="hljs-attr">toggle</span>: <span class="hljs-literal">false</span> });
-
+<pre><code class="language-javascript">document.addEventListener("DOMContentLoaded", function(event) {
+  new MetisMenu('#menu2', {
+    toggle: false
   });
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+});
 </code></pre>
 
             </div>
@@ -308,15 +302,9 @@
               </span>
             </div>
             <div class="panel-body" dir="ltr">
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">"rtl"</span>&gt;</span>
-...
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  $(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-
-      $(<span class="hljs-string">'#menu3'</span>).metisMenu();
-
-  });
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<pre><code class="language-javascript">document.addEventListener("DOMContentLoaded", function(event) {
+  new MetisMenu('#menu3');
+});
 </code></pre>
 
 
@@ -419,7 +407,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   
-  <script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-alpha.1/dist/metisMenu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-beta.0/dist/metisMenu.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/noty/lib/noty.min.js"></script>
 

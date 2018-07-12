@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-alpha.1/dist/metisMenu.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-beta.0/dist/metisMenu.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty/lib/noty.css">
@@ -175,29 +175,47 @@
           </span>
         </div>
         <div class="panel-body">
-          <pre><code class="language-javascript">
-  document.addEventListener("DOMContentLoaded", function(event) {
+<pre><code class="language-javascript">document.addEventListener("DOMContentLoaded", function(event) {
 
-  new MetisMenu('#menu').metisMenu()
-  .on('show.metisMenu', function(event) {
+  new MetisMenu('#menu').on('show.metisMenu', function(event) {
+    
+    new Noty({
+      text: event.detail.showElement.parentNode.querySelector('a').innerHTML + ' opening ...',
+      layout: 'topRight',
+      type: 'information',
+      theme: 'relax',
 
-      // do something…
-
+      timeout: 1000
+    }).show();
   }).on('shown.metisMenu', function(event) {
-
-    // do something…
-
+    new Noty({
+      text: event.detail.shownElement.parentNode.querySelector('a').innerHTML + ' opened',
+      layout: 'topRight',
+      type: 'success',
+      theme: 'relax',
+      timeout: 3000
+    }).show();
   }).on('hide.metisMenu', function(event) {
-
-    // do something…
-
+    new Noty({
+      text: event.detail.hideElement.parentNode.querySelector('a').innerHTML + ' collapsing ...',
+      layout: 'topRight',
+      type: 'warning',
+      theme: 'relax',
+      timeout: 1000
+    }).show();
   }).on('hidden.metisMenu', function(event) {
-
-    // do something…
-
+    new Noty({
+      text: event.detail.hiddenElement.parentNode.querySelector('a').innerHTML + ' collapsed',
+      layout: 'topRight',
+      type: 'error',
+      theme: 'relax',
+      timeout: 3000
+    }).show();
+    
   });
+
 });
-              </code></pre>
+</code></pre>
 
 
 <p>
@@ -228,7 +246,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-alpha.1/dist/metisMenu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-beta.0/dist/metisMenu.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/noty/lib/noty.min.js"></script>
 

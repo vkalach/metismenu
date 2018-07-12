@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-alpha.1/dist/metisMenu.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-beta.0/dist/metisMenu.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty/lib/noty.css">
@@ -231,15 +231,11 @@
               </span>
             </div>
             <div class="panel-body">
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  $(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-
-    $(<span class="hljs-string">'.metisFolder'</span>).metisMenu({
-      <span class="hljs-attr">toggle</span>: <span class="hljs-literal">false</span>
+<pre><code class="language-js">document.addEventListener("DOMContentLoaded", function(event) {
+    new MetisMenu(".metisFolder", {
+      toggle: false
     });
-
   });
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
               <p>
                 <br>
@@ -269,7 +265,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-alpha.1/dist/metisMenu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenu@3.0.0-beta.0/dist/metisMenu.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/noty/lib/noty.min.js"></script>
 

@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
   new MetisMenu('#menu').on('show.metisMenu', function(event) {
+    
     new Noty({
-      text: event.parentNode.querySelector('a').innerHTML + ' opening ...',
+      text: event.detail.showElement.parentNode.querySelector('a').innerHTML + ' opening ...',
       layout: 'topRight',
       type: 'information',
       theme: 'relax',
@@ -11,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }).show();
   }).on('shown.metisMenu', function(event) {
     new Noty({
-      text: event.querySelector('a').innerHTML + ' opened',
+      text: event.detail.shownElement.parentNode.querySelector('a').innerHTML + ' opened',
       layout: 'topRight',
       type: 'success',
       theme: 'relax',
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }).show();
   }).on('hide.metisMenu', function(event) {
     new Noty({
-      text: event.querySelector('a').innerHTML + ' collapsing ...',
+      text: event.detail.hideElement.parentNode.querySelector('a').innerHTML + ' collapsing ...',
       layout: 'topRight',
       type: 'warning',
       theme: 'relax',
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }).show();
   }).on('hidden.metisMenu', function(event) {
     new Noty({
-      text: event.querySelector('a').innerHTML + ' collapsed',
+      text: event.detail.hiddenElement.parentNode.querySelector('a').innerHTML + ' collapsed',
       layout: 'topRight',
       type: 'error',
       theme: 'relax',
