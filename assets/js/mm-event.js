@@ -7,7 +7,7 @@ $(function() {
       type: 'information',
       theme: 'relax',
 
-      timeout: 1000
+      timeout: 350
     }).show();
   }).on('shown.metisMenu', function(event) {
     new Noty({
@@ -15,7 +15,7 @@ $(function() {
       layout: 'topRight',
       type: 'success',
       theme: 'relax',
-      timeout: 3000
+      timeout: 350
     }).show();
   }).on('hide.metisMenu', function(event) {
     new Noty({
@@ -23,7 +23,7 @@ $(function() {
       layout: 'topRight',
       type: 'warning',
       theme: 'relax',
-      timeout: 1000
+      timeout: 350
     }).show();
   }).on('hidden.metisMenu', function(event) {
     new Noty({
@@ -31,7 +31,7 @@ $(function() {
       layout: 'topRight',
       type: 'error',
       theme: 'relax',
-      timeout: 3000
+      timeout: 350
     }).show();
   });
 
