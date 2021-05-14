@@ -1,7 +1,7 @@
 /*!
 * metismenu https://github.com/onokumus/metismenu#readme
 * A jQuery menu plugin
-* @version 3.0.6
+* @version 3.0.7
 * @author Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)
 * @license: MIT 
 */
@@ -21,7 +21,7 @@
 .metismenu .glyphicon.arrow:before {
   content: "\e079";
 }
-.metismenu .mm-active > a > .glyphicon.arrow:before {
+.metismenu .active > a > .glyphicon.arrow:before {
   content: "\e114";
 }
 
@@ -33,7 +33,7 @@
 .metismenu .fa.arrow:before {
   content: "\f104";
 }
-.metismenu .mm-active > a > .fa.arrow:before {
+.metismenu .active > a > .fa.arrow:before {
   content: "\f107";
 }
 
@@ -43,9 +43,9 @@
 */
 
 .metismenu .ion.arrow:before {
-  content: "\f3d2"
+  content: "\f3d2";
 }
-.metismenu .mm-active > a > .ion.arrow:before {
+.metismenu .active > a > .ion.arrow:before {
   content: "\f3d0";
 }
 .metismenu .plus-times {
@@ -57,7 +57,7 @@
 .metismenu .fa.plus-times:before {
   content: "\f067";
 }
-.metismenu .mm-active > a > .fa.plus-times {
+.metismenu .active > a > .fa.plus-times {
   transform: rotate(45deg);
 }
 .metismenu .plus-minus {
@@ -69,19 +69,19 @@
 .metismenu .fa.plus-minus:before {
   content: "\f067";
 }
-.metismenu .mm-active > a > .fa.plus-minus:before {
+.metismenu .active > a > .fa.plus-minus:before {
   content: "\f068";
 }
-.metismenu .mm-collapse:not(.mm-show) {
+.metismenu .collapse:not(.show) {
   display: none;
 }
 
-.metismenu .mm-collapsing {
+.metismenu .collapsing {
   position: relative;
   height: 0;
   overflow: hidden;
   transition-timing-function: ease;
-  transition-duration: .35s;
+  transition-duration: 0.35s;
   transition-property: height, visibility;
 }
 
@@ -91,9 +91,9 @@
 
 .metismenu .has-arrow::after {
   position: absolute;
-  content: '';
-  width: .5em;
-  height: .5em;
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
   border-width: 1px 0 0 1px;
   border-style: solid;
   border-color: currentColor;
@@ -102,7 +102,7 @@
   transform: rotate(-45deg) translate(0, -50%);
   transform-origin: top;
   top: 50%;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 *[dir="rtl"] .metismenu .has-arrow::after {
@@ -111,12 +111,12 @@
   transform: rotate(135deg) translate(0, -50%);
 }
 
-.metismenu .mm-active > .has-arrow::after,
+.metismenu .active > .has-arrow::after,
 .metismenu .has-arrow[aria-expanded="true"]::after {
   transform: rotate(-135deg) translate(0, -50%);
 }
 
-*[dir="rtl"] .metismenu .mm-active > .has-arrow::after,
+*[dir="rtl"] .metismenu .active > .has-arrow::after,
 *[dir="rtl"] .metismenu .has-arrow[aria-expanded="true"]::after {
   transform: rotate(225deg) translate(0, -50%);
 }
